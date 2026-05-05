@@ -5,7 +5,7 @@ import {
   ChevronLeft, ChevronRight, X, PanelLeftClose, PanelLeftOpen
 } from 'lucide-react';
 
-// DADOS DOS MÓDULOS - Agora com Arrays de Imagens
+// DADOS DOS MÓDULOS - Caminhos apontando para a raiz (pasta public)
 const MODULOS_DATA = [
   {
     id: 'admin',
@@ -14,8 +14,8 @@ const MODULOS_DATA = [
     subtitulo: "Motor da Cooperativa",
     descricao: "O coração da Cooperativa. Orquestração de demandas, controle rigoroso da cadeia produtiva e homologação de novos associados.",
     imagens: [
-      { src: "src/telas/adiministrativo.png", caption: "Dashboard Administrativo" },
-      { src: "src/telas/adiministrativo2.png", caption: "Tela de Gestão de Demandas" }
+      { src: "/telas/adiministrativo.png", caption: "Dashboard Administrativo" },
+      { src: "/telas/adiministrativo2.png", caption: "Tela de Gestão de Demandas" }
     ],
     features: [
       { nome: "Gestão de Demandas (Motor de Pedidos)", status: "Operacional" },
@@ -31,8 +31,8 @@ const MODULOS_DATA = [
     subtitulo: "Autoatendimento Rural",
     descricao: "Interface simplificada para o produtor rural acompanhar demandas abertas e emitir documentos oficiais sem burocracia.",
     imagens: [
-      { src: "src/telas/Cooperados.png", caption: "Painel Principal do Produtor" },
-      { src: "src/telas/Cooperados2.png", caption: "Cadastro de Cooperado" }
+      { src: "/telas/Cooperados.png", caption: "Painel Principal do Produtor" },
+      { src: "/telas/Cooperados2.png", caption: "Cadastro de Cooperado" }
     ],
     features: [
       { nome: "Manifestação de Interesse", status: "Operacional" },
@@ -47,8 +47,9 @@ const MODULOS_DATA = [
     subtitulo: "Vitrine e Compras",
     descricao: "Canal direto para compradores (governamentais ou atacado) registrarem suas necessidades de compra direto no funil da cooperativa.",
     imagens: [
-      { src: "src/telas/clientes.png", caption: "Vitrine Digital de Produtos" },
-      { src: "src/telas/clienteinformaçoes.png", caption: "Carrinho e Fechamento de Pedido" }
+      { src: "/telas/clientes.png", caption: "Vitrine Digital de Produtos" },
+      // ATENÇÃO: Renomeie o arquivo na sua pasta para tirar o 'ç' (clienteinformacoes.png)
+      { src: "/telas/clienteinformacoes.png", caption: "Carrinho e Fechamento de Pedido" } 
     ],
     features: [
       { nome: "Registro de Nova Demanda", status: "Operacional" },
@@ -75,8 +76,8 @@ const MODULOS_DATA = [
     subtitulo: "Business Intelligence",
     descricao: "Painéis de alto nível desenhados para a diretoria. Cruzamento de dados entre produção, finanças e metas estratégicas.",
     imagens: [
-      { src: "src/telas/executivomapa.png", caption: "BI - Indicadores de Produção" },
-      { src: "src/telas/executivo.png", caption: "Painel de Controle de Acessos" }
+      { src: "/telas/executivomapa.png", caption: "BI - Indicadores de Produção" },
+      { src: "/telas/executivo.png", caption: "Painel de Controle de Acessos" }
     ],
     features: [
       { nome: "Gestão de Acessos e Perfis", status: "Em Progresso" },
@@ -87,9 +88,9 @@ const MODULOS_DATA = [
 ];
 
 const CAROUSEL_IMAGES_HOME = [
-  { src: "src/telas/sede.png", caption: "Sede da Cooperativa FAPE" },
-  { src: "src/telas/Equipe.png", caption: "Nossa Equipe de 5 Membros" },
-  { src: "src/telas/mapa.png", caption: "Cidades de Atuação" }
+  { src: "/telas/sede.png", caption: "Sede da Cooperativa FAPE" },
+  { src: "/telas/Equipe.png", caption: "Nossa Equipe de 5 Membros" },
+  { src: "/telas/mapa.png", caption: "Cidades de Atuação" }
 ];
 
 const StatusBadge = ({ status }) => {
@@ -107,7 +108,7 @@ const StatusBadge = ({ status }) => {
   );
 };
 
-// NOVO COMPONENTE: Carrossel Reutilizável
+// COMPONENTE: Carrossel Reutilizável
 const ImageCarousel = ({ images, onExpand, heightClass }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -246,7 +247,7 @@ export default function PortfolioFape() {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg border border-slate-100 flex items-center justify-center bg-white shadow-sm overflow-hidden p-1 shrink-0">
                 <img 
-                  src="src/telas/logo2.png" 
+                  src="/telas/logo2.png" 
                   alt="FAPE" 
                   className="w-full h-full object-contain"
                 />
