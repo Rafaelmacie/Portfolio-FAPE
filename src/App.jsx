@@ -6,7 +6,7 @@ import {
   History
 } from 'lucide-react';
 
-// DADOS DOS MÓDULOS - Com histórico de versões
+// DADOS DOS MÓDULOS - Com imagens e funcionalidades atreladas a cada versão
 const MODULOS_DATA = [
   {
     id: 'admin',
@@ -14,10 +14,7 @@ const MODULOS_DATA = [
     titulo: "Visão Administrativa",
     subtitulo: "Motor da Cooperativa",
     descricao: "O coração da Cooperativa. Orquestração de demandas, controle de clientes, cooperados e produtos.",
-    imagens: [
-      { src: "/telas/administrativo.png", caption: "Gestão de Cooperados" },
-      { src: "telas/administrativo_produtos.png", caption: "Gestão de Produtos" }
-    ],
+    tech: "React, Node.js, PostgreSQL",
     versoes: [
       {
         id: "1.0.0",
@@ -28,6 +25,10 @@ const MODULOS_DATA = [
           { nome: "Gestão de Clientes", status: "Operacional" },
           { nome: "Gestão de Demandas", status: "Em Progresso" },
           { nome: "Painel Administrativo", status: "Pendente" },
+        ],
+        imagens: [
+          { src: "/telas/administrativo.png", caption: "Gestão de Cooperados (Lançamento Inicial)" },
+          { src: "telas/administrativo_produtos.png", caption: "Gestão de Produtos" }
         ]
       },
       {
@@ -39,10 +40,13 @@ const MODULOS_DATA = [
           { nome: "Gestão de Clientes", status: "Operacional" },
           { nome: "Gestão de Demandas", status: "Em Progresso" },
           { nome: "Painel Administrativo", status: "Em Progresso" },
+        ],
+        imagens: [
+          { src: "/telas/cooperadosOcult.png", caption: "Gestão de Cooperados" },
+          { src: "telas/Demanda.png", caption: "Gestão de Produtos (Nova Funcionalidade)" }
         ]
       }
-    ],
-    tech: "React, Node.js, PostgreSQL"
+    ]
   },
   {
     id: 'financeiro',
@@ -50,10 +54,7 @@ const MODULOS_DATA = [
     titulo: "Visão Financeira",
     subtitulo: "Saúde e Tesouraria",
     descricao: "Controle estrito do capital social, gestão de integralizações e manutenção do livro-caixa.",
-    imagens: [
-      { src: "/telas/dados_bancarios.png", caption: "Dados Bancários de um Cooperado" },
-      { src: "telas/Integralizacao.png", caption: "Gestão de Integralizações" }
-    ],
+    tech: "React, Node.js, PostgreSQL",
     versoes: [
       {
         id: "1.0.0",
@@ -63,6 +64,9 @@ const MODULOS_DATA = [
           { nome: "Controle de Integralizações", status: "Em Planejamento" },
           { nome: "Livro-Caixa", status: "Pendente" },
           { nome: "Painel Financeiro", status: "Pendente" },
+        ],
+        imagens: [
+          { src: "/telas/dados_bancarios.png", caption: "Dados Bancários de um Cooperado" }
         ]
       },
       {
@@ -75,10 +79,14 @@ const MODULOS_DATA = [
           { nome: "Livro-Caixa", status: "Em Planejamento" },
           { nome: "Módulo fiscal", status: "Em Planejamento" },
           { nome: "Painel Financeiro", status: "Pendente" },
+        ],
+        imagens: [
+          { src: "telas/integralizacao2.png", caption: "Gestão de Integralizações" },
+          { src: "telas/fundos.png", caption: "Gestão de Integralizações" },
+          { src: "telas/calculoSobras.png", caption: "Gestão de Integralizações" },
         ]
       }
-    ],
-    tech: "React, Node.js, PostgreSQL"
+    ]
   },
   {
     id: 'executivo',
@@ -86,10 +94,7 @@ const MODULOS_DATA = [
     titulo: "Visão Executiva",
     subtitulo: "Business Intelligence",
     descricao: "Painéis de alto nível desenhados para a diretoria. Cruzamento de dados estratégicos.",
-    imagens: [
-      { src: "/telas/adiministrativo2.png", caption: "Tela Inicial do Sistema" },
-      { src: "/telas/executivo.png", caption: "Painel de Novidades" }
-    ],
+    tech: "React, Node.js, PostgreSQL",
     versoes: [
       {
         id: "1.0.0",
@@ -99,6 +104,10 @@ const MODULOS_DATA = [
           { nome: "Gestão dos dados da cooperativa", status: "Em Desenvolvimento" },
           { nome: "Administração da Página Principal", status: "Em Planejamento" },
           { nome: "Dashboards de Performance", status: "Pendente" }
+        ],
+        imagens: [
+          { src: "/telas/adiministrativo2.png", caption: "Tela Inicial do Sistema (v1.0.0)" },
+          { src: "/telas/executivo.png", caption: "Painel de Novidades" }
         ]
       },
       {
@@ -109,10 +118,13 @@ const MODULOS_DATA = [
           { nome: "Gestão dos dados da cooperativa", status: "Em Desenvolvimento" },
           { nome: "Administração da Página Principal", status: "Em Desenvolvimento" },
           { nome: "Dashboards de Performance", status: "Em Planejamento" }
+        ],
+        imagens: [
+          { src: "/telas/landingpage.png", caption: "Tela Inicial do Sistema" },
+          { src: "/telas/gestaoUsers.png", caption: "Tela de Gestão de usuários" },
         ]
       }
-    ],
-    tech: "React, Node.js, PostgreSQL"
+    ]
   },
   {
     id: 'cooperado',
@@ -120,6 +132,7 @@ const MODULOS_DATA = [
     titulo: "Cooperado",
     subtitulo: "Autoatendimento Rural",
     descricao: "Interface simplificada para o produtor rural acompanhar demandas e emitir documentos.",
+    tech: "Mobile-First UI, React-Native",
     versoes: [
       {
         id: "0.0.1",
@@ -128,7 +141,8 @@ const MODULOS_DATA = [
           { nome: "Manifestação de Interesse", status: "Pendente" },
           { nome: "Emissão de Fichas e Termos", status: "Pendente" },
           { nome: "Gerenciamento de Produção", status: "Pendente" }
-        ]
+        ],
+        imagens: []
       },
       {
         id: "0.0.2",
@@ -139,10 +153,10 @@ const MODULOS_DATA = [
           { nome: "Gerenciamento de Produção", status: "Pendente" },
           { nome: "LLM especialista em agropecuária", status: "Pendente" },
           { nome: "Ranking de scores", status: "Pendente" }
-        ]
+        ],
+        imagens: []
       }
-    ],
-    tech: "Mobile-First UI, React-Native"
+    ]
   },
   {
     id: 'cliente',
@@ -150,6 +164,7 @@ const MODULOS_DATA = [
     titulo: " Cliente",
     subtitulo: "Vitrine e Compras",
     descricao: "Canal direto para compradores registrarem suas necessidades de compra.",
+    tech: "React, Node.js, PostgreSQL",
     versoes: [
       {
         id: "0.0.1",
@@ -157,10 +172,10 @@ const MODULOS_DATA = [
         features: [
           { nome: "Visualização de Produtos", status: "Pendente" },
           { nome: "Realização de Demandas", status: "Pendente" },
-        ]
+        ],
+        imagens: []
       }
-    ],
-    tech: "React, Node.js, PostgreSQL"
+    ]
   }
 ];
 
@@ -184,59 +199,14 @@ const StatusBadge = ({ status }) => {
   );
 };
 
-// Gerenciador de Funcionalidades com Versão
-const FeatureVersionManager = ({ versoes }) => {
-  // Define a última versão como padrão
-  const [selectedVersionId, setSelectedVersionId] = useState(versoes[versoes.length - 1].id);
-
-  const currentVersao = versoes.find(v => v.id === selectedVersionId) || versoes[versoes.length - 1];
-
-  return (
-    <div className="w-full bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-5 border-b border-slate-100 pb-4 gap-4">
-        <div>
-          <h5 className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-            <History size={14} /> Histórico de Funcionalidades
-          </h5>
-        </div>
-
-        <div className="relative inline-block">
-          <select
-            value={selectedVersionId}
-            onChange={(e) => setSelectedVersionId(e.target.value)}
-            // Trocado de emerald para slate para neutralizar o componente
-            className="appearance-none bg-slate-50 border border-slate-200 text-slate-700 text-[11px] font-bold py-1.5 pl-3 pr-8 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500/20 shadow-sm"
-          >
-            {versoes.slice().reverse().map(v => (
-              <option key={v.id} value={v.id}>Versão {v.id} {v.data ? `(${v.data})` : ''}</option>
-            ))}
-          </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
-            <ChevronRight size={14} className="rotate-90" />
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-3 animate-in fade-in slide-in-from-top-1 duration-300">
-        {currentVersao.features.map((feat, idx) => (
-          <div
-            key={`${selectedVersionId}-${idx}`}
-            className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-slate-200 transition-colors"
-          >
-            <p className="text-sm text-slate-700 font-medium leading-tight">
-              {feat.nome}
-            </p>
-            <StatusBadge status={feat.status} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
 // COMPONENTE: Carrossel Reutilizável
 const ImageCarousel = ({ images, onExpand, heightClass }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Zera o índice sempre que o array de imagens mudar (ex: troca de versão)
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [images]);
 
   const nextImage = (e) => {
     e.stopPropagation();
@@ -258,7 +228,7 @@ const ImageCarousel = ({ images, onExpand, heightClass }) => {
           Telas Em Progresso
         </p>
         <p className="text-slate-400 text-xs mt-2 font-medium">
-          As imagens deste módulo estarão disponíveis em breve.
+          As imagens desta versão estarão disponíveis em breve.
         </p>
       </div>
     );
@@ -298,6 +268,78 @@ const ImageCarousel = ({ images, onExpand, heightClass }) => {
         </>
       )}
     </div>
+  );
+};
+
+// COMPONENTE NOVO: Encapsula a seção do módulo para isolar o estado da versão
+const ModuloSection = ({ modulo, onExpand }) => {
+  // O estado agora mora na seção, controlando o dropdown e o carrossel simultaneamente
+  const [selectedVersionId, setSelectedVersionId] = useState(modulo.versoes[modulo.versoes.length - 1].id);
+  const currentVersao = modulo.versoes.find(v => v.id === selectedVersionId) || modulo.versoes[modulo.versoes.length - 1];
+
+  return (
+    <section id={modulo.id} className="min-h-screen w-full flex flex-col justify-center py-20 border-t border-slate-200/60 px-8 md:px-16 lg:px-24 xl:px-32">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
+        <div className="w-full flex flex-col items-start">
+          <div className="inline-flex items-center justify-center p-3 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-600 mb-5 shadow-sm">
+            {modulo.icone}
+          </div>
+          <h3 className="text-xs font-bold text-emerald-600 uppercase tracking-[0.2em] mb-2">{modulo.subtitulo}</h3>
+          <h4 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4 tracking-tight w-full">{modulo.titulo}</h4>
+          <p className="text-sm lg:text-base text-slate-600 leading-relaxed mb-6 w-full">{modulo.descricao}</p>
+          <div className="inline-flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3 shadow-sm">
+            <Code2 className="text-slate-400 shrink-0" size={20} />
+            <div>
+              <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-0.5">Stack</p>
+              <p className="text-emerald-700 font-mono font-bold text-xs">{modulo.tech}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Gerenciador de Funcionalidades Incorporado */}
+        <div className="w-full bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-5 border-b border-slate-100 pb-4 gap-4">
+            <div>
+              <h5 className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                <History size={14} /> Histórico de Funcionalidades
+              </h5>
+            </div>
+
+            <div className="relative inline-block">
+              <select
+                value={selectedVersionId}
+                onChange={(e) => setSelectedVersionId(e.target.value)}
+                className="appearance-none bg-slate-50 border border-slate-200 text-slate-700 text-[11px] font-bold py-1.5 pl-3 pr-8 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500/20 shadow-sm"
+              >
+                {modulo.versoes.slice().reverse().map(v => (
+                  <option key={v.id} value={v.id}>Versão {v.id} {v.data ? `(${v.data})` : ''}</option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+                <ChevronRight size={14} className="rotate-90" />
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-3 animate-in fade-in slide-in-from-top-1 duration-300">
+            {currentVersao.features.map((feat, idx) => (
+              <div
+                key={`${selectedVersionId}-${idx}`}
+                className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-slate-200 transition-colors"
+              >
+                <p className="text-sm text-slate-700 font-medium leading-tight">
+                  {feat.nome}
+                </p>
+                <StatusBadge status={feat.status} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* O carrossel agora recebe as imagens da versão atualmente selecionada no dropdown */}
+      <ImageCarousel images={currentVersao.imagens} onExpand={onExpand} heightClass="h-[350px] md:h-[450px] lg:h-[550px]" />
+    </section>
   );
 };
 
@@ -379,28 +421,9 @@ export default function PortfolioFape() {
             </section>
 
             {MODULOS_DATA.map((modulo) => (
-              <section id={modulo.id} key={modulo.id} className="min-h-screen w-full flex flex-col justify-center py-20 border-t border-slate-200/60 px-8 md:px-16 lg:px-24 xl:px-32">
-                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-12">
-                  <div className="w-full flex flex-col items-start">
-                    <div className="inline-flex items-center justify-center p-3 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-600 mb-5 shadow-sm">{modulo.icone}</div>
-                    <h3 className="text-xs font-bold text-emerald-600 uppercase tracking-[0.2em] mb-2">{modulo.subtitulo}</h3>
-                    <h4 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4 tracking-tight w-full">{modulo.titulo}</h4>
-                    <p className="text-sm lg:text-base text-slate-600 leading-relaxed mb-6 w-full">{modulo.descricao}</p>
-                    <div className="inline-flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3 shadow-sm">
-                      <Code2 className="text-slate-400 shrink-0" size={20} />
-                      <div>
-                        <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-0.5">Stack</p>
-                        <p className="text-emerald-700 font-mono font-bold text-xs">{modulo.tech}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <FeatureVersionManager versoes={modulo.versoes} />
-                </div>
-
-                <ImageCarousel images={modulo.imagens} onExpand={setExpandedImage} heightClass="h-[350px] md:h-[450px] lg:h-[550px]" />
-              </section>
+              <ModuloSection key={modulo.id} modulo={modulo} onExpand={setExpandedImage} />
             ))}
+
           </div>
         </main>
       </div>
