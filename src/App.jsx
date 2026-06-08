@@ -348,7 +348,7 @@ export default function PortfolioFape() {
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg border border-slate-100 flex items-center justify-center bg-white shadow-sm overflow-hidden p-1 shrink-0">
                 <img src="/telas/logo2.png" alt="FAPE" className="w-full h-full object-contain" />
               </div>
-              {!isSidebarCollapsed && <div className="flex flex-col animate-in fade-in duration-300 overflow-hidden whitespace-nowrap"><h1 className="font-extrabold text-emerald-600 text-base md:text-lg tracking-widest leading-tight">SERTANEJA FAPE</h1></div>}
+              {!isSidebarCollapsed && <div className="flex flex-col animate-in fade-in duration-300 overflow-hidden whitespace-nowrap"><h1 className="font-extrabold text-emerald-600 text-base md:text-lg tracking-widest leading-tight">COOPERATIVASCE</h1></div>}
             </div>
           </div>
 
